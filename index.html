@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 </head>
 <body>
   <!--[if IE]>
@@ -36,22 +36,26 @@
         <div class="wrap">
           <h1>Get Involved with<br>The Annual Cookie Project</h1>
           <p>blah blah blah</p>
-          <form id="donate_form">
+          <form id="donate_form" action="https://send.pageclip.co/Tfx14Jb17zzX3TaUZA7zHTLVHAl40IAm" class="pageclip-form" method="post">
               <label for="email">How Can You Help?</label>
-              <select name="donate">
+              <select id="emaildonate" name="donate">
                 <option>Donate Cookies</option>
                 <option>Donate Funds</option>
                 <option>Volunteer</option>
                 <option>Other</option>
               </select>
               <label for="name">Your Name</label>
-              <input name="name" type="text" required placeholder="Your Name*">
+              <input id="emailname" name="name" type="text" required placeholder="Your Name*">
               <label for="email">Your Email Address</label>
-              <input name="email" type="text" required placeholder="Your Company (optional)">
-              <label for="company">Your Company (optional)</label>
-              <input name="company" type="email" required placeholder="Your Email Address*">
+              <input name="email" type="email" required placeholder="Your Email Address*">
+              <label for="company_name">Your Company (optional)</label>
+              <input name="company_name" type="text" placeholder="Your Company (optional)">
               <label for="more_info">More Info (optional)</label>
               <textarea name="more_info" placeholder="More Info"></textarea>
+              <input id="emailsubject" type="hidden" name="subject" value="">
+              <button type="submit" class="pageclip-form__submit">
+                <span>Send</span>
+              </button>
           </form>
         </div>
     </main> 
@@ -66,11 +70,22 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-
+  <script>
+    $(document).ready(function(){
+      $("form input, form select").change(function(e){
+        var name = $("#emailname").val();
+        var emailco = $("#emailcompany").val();
+        if (emailco != '' && emailco != undefined) name += " from "+$("#emailcompany").val();
+        var donation = $("#emaildonate").val();
+        $("#emailsubject").val(name+" Is Offering To Donate "+donation);
+      })
+    });
+  </script>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body></html>
