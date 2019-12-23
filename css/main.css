@@ -267,6 +267,10 @@ textarea {
   color: #330F0A;
 }
 
+.page-home footer {
+  margin-top: 30px;
+}
+
 @media (max-width: 767px) {
   .home-right {
     position: fixed;
@@ -329,13 +333,17 @@ textarea {
 
   .page-home {
     display: flex;
+    height: 100vh;
   } 
   .home-left, .home-right {
     display: block;
     flex: 0 0 50%;
-    height: 100vh;
     overflow: auto;
     position: relative;
+  }
+  .home-left-inner {
+    margin: 30px auto;
+    max-width: 500px;
   }
   .photo-slider {
     position: absolute!important;
