@@ -263,6 +263,98 @@ textarea {
   }
 }
 
+.page-home {
+  color: #330F0A;
+}
+
+@media (max-width: 767px) {
+  .home-right {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .home-left {
+    max-width: 100%!important;
+    margin: 0!important;
+    background: none!important;
+    padding: 0!important;
+  }
+  .home-left header,
+  .home-left main,
+  .home-left footer {
+    background: #fff;
+    padding: 10px;
+  }
+  .home-left header h1,
+  .home-left header h2 {
+    text-align: center;
+    margin: 0;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .home-left main h2,
+  .home-left main p,
+  .home-left main form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .home-left main {
+    margin: 70vh 0 0 0;
+  }
+}
+
+.home-left footer {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .page-home {
+    /* background: url('../img/erol-ahmed-AmzKuEnr1VY-unsplash.jpg');
+    background-size: 50vw 70vw;
+    background-position: left; */
+    background: #f7e4c4;
+  }
+
+  .home-left-inner {
+    padding: 20px;
+    background: white;
+    margin-top: 30px;
+    box-shadow: 0px 6px 9px rgba(0,0,0,0.15), 0 1px 3px rgba(0,0,0,0.6);
+    border-radius: 3px;
+    border: 3px solid #bd1b32;
+  }
+
+  .page-home {
+    display: flex;
+  } 
+  .home-left, .home-right {
+    display: block;
+    flex: 0 0 50%;
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+  }
+  .photo-slider {
+    position: absolute!important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+.photo-slider {
+  position: relative;
+  overflow: hidden;
+}
+.photo-slide {
+  height: 100vh!important;
+  background-position: center;
+  background-size: cover;
+}
+
 .wrap {
   max-width: 500px;
   margin: 0 auto;
@@ -285,10 +377,19 @@ textarea {
   border: 1px solid grey;
   border-radius: 3px;
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
   /* font-family: 'Indie Flower', cursive; */
-  font-family: 'Patrick Hand', cursive;
+  /* font-family: 'Patrick Hand', cursive; */
   /* font-family: 'Mansalva', cursive; */
   /* font-family: 'Pacifico', cursive; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+h2 {
+  font-family: 'Patrick Hand', cursive;
 }
