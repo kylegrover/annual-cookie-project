@@ -4,7 +4,9 @@ jQuery(document).ready(function($){
         autoplay: true,
         autoplaySpeed: 4000,
         fade: true,
-        infinite: true,
-
+        infinite: true
     });
+    $(".read-more").click(function(e){
+        $(this).next('.read-more-content').slideToggle();
+    })
 })
